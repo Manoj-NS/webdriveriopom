@@ -30,6 +30,9 @@ class LeafTapsCreateLead {
         await this.enterCompanyName.setValue(companyname);
         await this.enterFirstName.setValue(fname);
         await this.enterLastName.setValue(lname);
+
+
+        
         await this.clickSubmitButton.click();
 
         const getleadIdNo= await this.leadId.getText();

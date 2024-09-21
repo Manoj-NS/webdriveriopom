@@ -9,6 +9,9 @@ describe('Login Page', () => {
 
     it('UrlValidation', async () => {
 
+        await browser.setTimeout({'implicit': 4000});
+        await browser.maximizeWindow();
+
         await browser.url('http://leaftaps.com/opentaps/control/main');
         const expectedUrl = 'http://leaftaps.com/opentaps/control/main';
         await LeafTapsUrl.appUrl(expectedUrl);
@@ -31,25 +34,34 @@ describe('Login Page', () => {
 
     })
 
-    // it('CreateLead', async () => {
+    it('CreateLead', async () => {
 
-    //     await LeafTapsCreateLead.CreateLead('TestCompany1', 'Praveen', 'Kumar');
+        await LeafTapsCreateLead.CreateLead('TC01', 'Vijay', 'Kumar');
 
-    //     await LeafTapsCreateLead.CreateLead('TestCompany1', 'Nirmal', 'Kumar');
+        await LeafTapsCreateLead.CreateLead('TC01', 'Vishnu', 'Kumar');
 
-    //     await LeafTapsCreateLead.CreateLead('TestCompany1', 'Vimal', 'Kumar');
+        // await LeafTapsCreateLead.CreateLead('TC03', 'Vimal', 'Kumar');
 
-    //     await LeafTapsCreateLead.CreateLead('TestCompany1', 'Rajesh', 'Kumar');
-    //     await browser.pause(2000);
+        // await LeafTapsCreateLead.CreateLead('TC04', 'Rajesh', 'Kumar');
+        
+        // await LeafTapsCreateLead.CreateLead('TC05', 'Surya', 'Kumar');
+        
+        // await LeafTapsCreateLead.CreateLead('TC06', 'Raja', 'K');
 
-    // })
+        await browser.pause(2000);
+
+    })
 
     it('EditLead', async () =>{
 
 
 
-        await LeafTapsEditLead.editLead('14756');
-        await browser.pause(2000);
+        // await LeafTapsEditLead.editLead('3','10152', 'TC01');
+        
+        // // await LeafTapsEditLead.editLead('3','10149', 'TC01');
+        
+        // // await LeafTapsEditLead.editLead('3','10151', 'TC01');
+        // await browser.pause(2000);
 
 
     })
