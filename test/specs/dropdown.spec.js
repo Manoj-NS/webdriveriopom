@@ -46,7 +46,6 @@ describe('Edit Lead Selection', ()=>{
                 ddrText.push(text);
 
                 if(text==selectLead){
-
                     await options.click();
                     console.log(text+': Lead id clicked');
                     break;

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" errors="0" skipped="0">
+  <testsuite name="SamplePage" timestamp="2024-09-25T00:51:49" time="9.269" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="SamplePage"/>
+      <property name="capabilities" value="chrome.129_0_6668_71.windows"/>
+      <property name="file" value="file:///C:/Manoj%2009222024/webdriveriopom/test/specs/samplepage.spec.js"/>
+    </properties>
+    <testcase classname="chrome.129_0_6668_71.windows.SamplePage" name="Enter URL" time="4.896">
+      <system-out><![CDATA[
+COMMAND: POST /session/dcc5ff93de556d7ec574ee25858ef422/timeouts - {"implicit":10000}
+RESULT: {"implicit":10000}
+COMMAND: POST /session/dcc5ff93de556d7ec574ee25858ef422/window/maximize - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.129_0_6668_71.windows.SamplePage" name="Radio Button Education" time="4.364">
+      <system-out><![CDATA[
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: POST /session/dcc5ff93de556d7ec574ee25858ef422/element/f.BE48393BF6091A7EA005376722C046D7.d.1D080901952937184189AEC7B480BC04.e.32/click - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: GET /session/dcc5ff93de556d7ec574ee25858ef422/window - {}
+RESULT: {}
+COMMAND: DELETE /session/dcc5ff93de556d7ec574ee25858ef422 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

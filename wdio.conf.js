@@ -101,7 +101,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['visual', 'lambdatest', 'zafira-listener', 'reportportal'],
+    services: ['lambdatest', 'reportportal'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -110,7 +110,7 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-
+    
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -124,17 +124,19 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    
-
-    
     reporters: ['spec',
-        [
-            'allure', {
-                outputDir: 'allure-results',
-                disableWebdriverStepsReporting: true,
-                disableWebdriverScreenshotsReporting: false,
-            }
-        ]],
+    // [
+    //     'allure', {outputDir: 'allure-results'}
+    // ]
+
+    ['junit', {
+        outputDir: 'junit-reports',
+        outputFileFormat: function(options) { // optional
+          //  return `results-${new Date().getTime()}.xml`
+            return `results-${options.cid}.xml`
+        }
+    }]
+],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -237,7 +239,7 @@ exports.config = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    afterTest: async function (test, context, { error, result, duration, passed, retries }) {
+    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
             await browser.takeScreenshot();
         }
